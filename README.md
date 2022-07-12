@@ -14,7 +14,7 @@ Your checkpoint is really a terminal app; which is what you'll be graded on. How
 
 ## Checklist
 
-<!-- This is for their personal navigation through the project. They can go through and make sure they get each thing and can comb over it later.  -->
+<!-- This is for personal navigation through the project. They can go through and make sure they get each thing and can comb over it later.  -->
 
 1. 20pts - **Code Plan** - Include this in a `README.md` file in your folder with comments in your code
 1. 10pts - **Move Blocks** - User can move "blocks" from column to column
