@@ -32,14 +32,15 @@ const printStacks = () => {
 // Next, what do you think this function should do?
 const movePiece = (firstMove, secondMove) => {
   // Your code here to move last piece to selected stack
-  //
-
+ let removedBlock = stacks.a.pop()
+ stacks.c.push(removedBlock)
+ console.log(stacks)
 }
 
 // Before you move, should you check if the move it actually allowed? Should 3 be able to be stacked on 2
 const isLegal = () => {
   // Your code here to ensure disk is smaller than disk in stack
-
+ 
 }
 
 // What is a win in Towers of Hanoi? When should this function run?

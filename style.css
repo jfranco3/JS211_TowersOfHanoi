@@ -1,3 +1,10 @@
+body {
+  text-align: center;
+  background-image: url("bgimage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 [data-row] {
   display: flex;
   justify-content: flex-start;
@@ -13,22 +20,29 @@
 
 [data-row].red {
   background-color: #f6c5c5;
+  height:50px;
 }
 
 [data-row].yellow {
   background-color: #ffffa9;
+  height:50px;
 }
 
 [data-row].green {
   background-color: #baf6ba;
+  height:50px;
 }
 
 [data-row].blue {
   background-color: aliceblue;
+  height:50px;
 }
 
 .stone {
   z-index: 10;
+  border: 1px soild black;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px #331306;
 }
 
 [data-color] {
@@ -37,22 +51,22 @@
 }
 
 [data-color="blue"] {
-  height: 33px;
+  height: 20px;
   background-color: blue;
 }
 
 [data-color="green"] {
-  height: 33px;
+  height: 30px;
   background-color: green;
 }
 
 [data-color="red"] {
-  height: 33px;
+  height: 40px;
   background-color: red;
 }
 
 [data-color="yellow"] {
-  height: 33px;
+  height: 50px;
   background-color: yellow;
 }
 
