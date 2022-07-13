@@ -30,34 +30,52 @@ const printStacks = () => {
 }
 
 // Next, what do you think this function should do?
-const movePiece = (firstMove, secondMove) => {
+const movePiece = (startStack, endStack) => {
   // Your code here to move last piece to selected stack
-  let removedBlock = stacks[firstMove].pop()
-  stacks[secondMove].push(removedBlock)
+  let removedBlock = stacks[startStack].pop()
+  stacks[endStack].push(removedBlock)
 }
 
 // Before you move, should you check if the move it actually allowed? Should 3 be able to be stacked on 2
-const isLegal = (firstMove, secondMove) => {
-  // Your code here to ensure disk is smaller than disk in stack
- if (firstMove > secondMove && stacks[firstMove] > stacks[secondMove]) {
-  return false;
- } else {
+const isLegal = (startStack, endStack) => {
+// Your code here to ensure disk is smaller than disk in stack--acces last item in stack .length-1
+//  if (startStack > endStack && stacks[startStack] > stacks[endStack]) {
+//   return false;
+//  } else {
+//   return true;
+if (stacks[startStack][stacks[startStack].length-1]> stacks[endStack][stacks[endStack].length-1] || stacks[startStack] == []) {
+ return false
+} else {
   return true;
- }
+}
 }
 
 // What is a win in Towers of Hanoi? When should this function run?
 const checkForWin = () => {
   // Your code here
+  if(stacks.b.length == 4) {
+    return true
+  } else {
+    return false;
+  }
+
   //look at test-looking for length in array
+  //When all the blocks are stacked into column 2 or 1 the user is alerted they won
+
 }
 
 // When is this function called? What should it do with its argument?
 const towersOfHanoi = (startStack, endStack) => {
   // Your code here
+  if (isLegal(startStack, endStack)) {
   movePiece(startStack, endStack) 
-  checkForWin()
+  } else {
+    return 'Try another move!'
   }
+  checkForWin() 
+}
+
+
 
 
 const getPrompt = () => {
