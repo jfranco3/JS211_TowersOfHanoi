@@ -21,22 +21,22 @@ body {
 
 [data-row].red {
   background-color: #f6c5c5;
-  height:50px;
+  height: 50px;
 }
 
 [data-row].yellow {
   background-color: #ffffa9;
-  height:50px;
+  height: 50px;
 }
 
 [data-row].green {
   background-color: #baf6ba;
-  height:50px;
+  height: 50px;
 }
 
 [data-row].blue {
   background-color: aliceblue;
-  height:50px;
+  height: 50px;
 }
 
 .stone {

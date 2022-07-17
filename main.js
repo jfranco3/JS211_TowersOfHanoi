@@ -2,6 +2,7 @@
 
 const assert = require('assert');
 const readline = require('readline');
+const { start } = require('repl');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -43,8 +44,17 @@ const isLegal = (startStack, endStack) => {
 //   return false;
 //  } else {
 //   return true;
-if (stacks[startStack][stacks[startStack].length-1]> stacks[endStack][stacks[endStack].length-1] || stacks[startStack] == []) {
- return false
+
+
+let startingIndex = stacks[startStack].length-1
+let endingIndex = stacks[endStack].length-1
+let movingPiece = stacks[startStack][startingIndex]
+let moveTo = stacks[endStack][endingIndex]
+
+
+if (movingPiece > moveTo || stacks[startStack] == []) {
+// if (stacks[startStack][stacks[startStack].length-1]> stacks[endStack][stacks[endStack].length-1] || stacks[startStack] == []) {
+ return false;
 } else {
   return true;
 }
